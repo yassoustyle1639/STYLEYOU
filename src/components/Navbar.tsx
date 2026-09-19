@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
               <div className="flex flex-col text-start">
                 <span className="font-serif-luxury text-lg sm:text-2xl font-extrabold tracking-[0.14em] sm:tracking-[0.16em] gold-gradient-text uppercase leading-none">
-                  STYLE YOU
+                  YASSOU STYLE
                 </span>
                 <span className="text-[8.5px] sm:text-[10px] tracking-[0.20em] sm:tracking-[0.24em] text-[#A69F8E] uppercase font-semibold mt-1">
                   FASHION & LUXE BEAUTY • ALGER
@@ -430,7 +430,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                   <div>
                     <span className="font-serif-luxury text-lg font-black tracking-[0.16em] text-transparent bg-clip-text bg-gradient-to-r from-[#FFF5CE] via-[#D4AF37] to-[#F3E5AB] block leading-none">
-                      STYLE YOU
+                      YASSOU STYLE
                     </span>
                     <span className="text-[10px] text-[#E5C86C] tracking-[0.18em] uppercase font-bold flex items-center gap-1.5 mt-1">
                       <Sparkles className="w-2.5 h-2.5 text-[#D4AF37]" />
