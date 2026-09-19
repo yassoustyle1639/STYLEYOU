@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const copy = {
   ar: {
-    nav: ["المتجر","المختارات","قصتنا","تواصل معنا"],
+    nav: ["المتجر","قصتنا","تواصل معنا"],
     announcement: "YASSOU STYLE · توصيل إلى 58 ولاية · الدفع عند الاستلام",
     micro: "تأسست · الجزائر · 2026",
     hero: "فخامة، بتوقيعك.",
@@ -38,7 +38,7 @@ const copy = {
     editorialDesc: ["قطع سوداء بتفاصيل فاخرة","جمال مختار بعناية","عطور تترك أثراً"]
   },
   fr: {
-    nav: ["Boutique","La sélection","Notre histoire","Contact"],
+    nav: ["Boutique","Notre histoire","Contact"],
     announcement: "YASSOU STYLE · LIVRAISON AUX 58 WILAYAS · PAIEMENT À LA LIVRAISON",
     micro: "ÉTABLI · ALGÉRIE · 2026",
     hero: "Le luxe, à votre image.",
@@ -74,7 +74,7 @@ const copy = {
     editorialDesc: ["Pièces noires aux détails luxueux","Beauté choisie avec soin","Des parfums qui laissent une empreinte"]
   },
   en: {
-    nav: ["Shop","The Edit","Our Story","Contact"],
+    nav: ["Shop","Our Story","Contact"],
     announcement: "YASSOU STYLE · DELIVERY TO ALL 58 WILAYAS · CASH ON DELIVERY",
     micro: "EST. · ALGERIA · 2026",
     hero: "Luxury, redefined for you.",
@@ -112,165 +112,82 @@ const copy = {
 } as const;
 
 const images = {
-  editorial: [
-    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=90",
-    "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=90"
-  ],
   products: [
-    "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=1000&q=90",
-    "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1000&q=90",
-    "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=90",
-    "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=90"
+    {
+      name: ["طقم أسود حريري","ENSEMBLE SOIE NOIRE","BLACK SILK SET"],
+      price: ["6,900 دج","6 900 DA","6,900 DA"],
+      description: ["طقم أنيق بتفاصيل فاخرة ولمسة ناعمة.","Ensemble élégant aux détails luxueux et finition raffinée.","Elegant set with luxury details and a refined finish."],
+      photos: [
+        "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=90"
+      ]
+    },
+    {
+      name: ["عطر مميز","PARFUM SIGNATURE","SIGNATURE PERFUME"],
+      price: ["5,400 دج","5 400 DA","5,400 DA"],
+      description: ["عطر أنيق برائحة مميزة تترك أثراً.","Parfum élégant au caractère raffiné.","A refined signature scent that leaves an impression."],
+      photos: [
+        "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=1200&q=90"
+      ]
+    },
+    {
+      name: ["مجموعة إشراقة الجمال","SET BEAUTÉ GLOW","GLOW BEAUTY SET"],
+      price: ["7,900 دج","7 900 DA","7,900 DA"],
+      description: ["مجموعة جمال مختارة للعناية والإشراقة.","Une sélection beauté pensée pour le soin et l'éclat.","A curated beauty set for care and glow."],
+      photos: [
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1200&q=90"
+      ]
+    },
+    {
+      name: ["حقيبة نوار","SAC NOIR","NOIR BAG"],
+      price: ["8,200 دج","8 200 DA","8,200 DA"],
+      description: ["حقيبة سوداء بتصميم عصري وأنيق.","Sac noir au design moderne et élégant.","A modern black bag with a refined silhouette."],
+      photos: [
+        "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=1200&q=90",
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=90"
+      ]
+    }
   ],
-  story: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=90",
   hero: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2200&q=90"
 };
-
-function App() {
-  const [lang, setLang] = useState<"ar" | "fr" | "en">("ar");
-  const [open, setOpen] = useState(false);
-  const [cart, setCart] = useState(0);
-  const rtl = lang === "ar";
-  const t = copy[lang];
-
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = rtl ? "rtl" : "ltr";
-  }, [lang, rtl]);
-
-  return (
-    <div className={"app " + (rtl ? "rtl" : "ltr")}>
-      <div className="announcement">{t.announcement}</div>
-
-      <header>
-        <button className="hamb" onClick={() => setOpen(!open)}>☰</button>
-
-        <nav className={open ? "open" : ""}>
-          {t.nav.map((n, i) => (
-            <a key={n} href={["#shop","#edit","#story","#contact"][i]} onClick={() => setOpen(false)}>{n}</a>
-          ))}
-        </nav>
-
-        <a className="logo" href="#">YASSOU<span>STYLE</span><small>{t.signature}</small></a>
-
-        <div className="tools">
-          <div className="language">
-            <button>{t.lang}⌄</button>
-            <div className="languageMenu">
-              {(["ar","fr","en"] as const).map((l) => (
-                <button key={l} onClick={() => { setLang(l); setOpen(false); }}>
-                  {l === "ar" ? "العربية" : l === "fr" ? "Français" : "English"}
-                </button>
-              ))}
-            </div>
-          </div>
-          <button aria-label="search">⌕</button>
-          <button onClick={() => setCart(cart + 1)}>BAG <b>{cart}</b></button>
-        </div>
-      </header>
-
-      <main>
-        <section className="hero">
-          <video autoPlay muted loop playsInline poster={images.hero}>
-            <source src="https://cdn.coverr.co/videos/coverr-a-woman-in-a-black-dress-1575/1080p.mp4" type="video/mp4" />
-          </video>
-          <div className="veil" />
-          <div className="heroText">
-            <div className="micro">{t.micro}</div>
-            <h1>YASSOU<br /><em>STYLE</em></h1>
-            <p>{t.hero}</p>
-            <strong>{t.sub}</strong>
-            <button className="cta" onClick={() => document.querySelector("#shop")?.scrollIntoView({ behavior: "smooth" })}>
-              {t.cta} <span>↗</span>
-            </button>
-          </div>
-          <div className="heroSide">{t.scroll} <i>↓</i></div>
-        </section>
-
-        <section className="intro">
-          <div className="goldline" />
-          <p>{t.intro}</p>
-          <div className="goldline" />
-        </section>
-
-        <section id="edit" className="editorial">
-          <div className="sectionTitle">
-            <span>01 — {t.edit}</span>
-            <h2>{lang === "ar" ? <>الـ<br /><i>مختارات</i></> : <>THE<br /><i>EDIT</i></>}</h2>
-            <p>{t.editSub}</p>
-          </div>
-
-          <div className="editorialGrid">
-            {images.editorial.map((img, i) => (
-              <article key={img}>
-                <img src={img} alt={t.editorialNames[i]} />
-                <div>
-                  <small>0{i + 1}</small>
-                  <h3>{t.editorialNames[i]}</h3>
-                  <p>{t.editorialDesc[i]}</p>
-                  <button>{t.view} ↗</button>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section id="shop" className="shop">
           <div className="shopHead">
             <span>02 — {t.shopLabel}</span>
-            <h2>{lang === "ar" ? <>المجموعة<br /><i>المميزة</i></> : lang === "fr" ? <>COLLECTION<br /><i>SIGNATURE</i></> : <>THE SIGNATURE<br /><i>COLLECTION</i></>}</h2>
-            <button>{t.all} ↗</button>
+            <div>
+              <h2>{lang === "ar" ? <>البضاعة<br /><i>المتاحة</i></> : lang === "fr" ? <>LES ARTICLES<br /><i>DISPONIBLES</i></> : <>AVAILABLE<br /><i>PRODUCTS</i></>}</h2>
+              <div className="viewToggle">
+                <button className={viewMode === 1 ? "active" : ""} onClick={() => setViewMode(1)}>1</button>
+                <button className={viewMode === 2 ? "active" : ""} onClick={() => setViewMode(2)}>2</button>
+              </div>
+            </div>
           </div>
 
-          <div className="products">
-            {images.products.map((img, i) => (
-              <article className="product" key={img}>
-                <div className="pic">
-                  <img src={img} alt={t.productNames[i]} />
-                  <button onClick={() => setCart(cart + 1)}>{t.add} +</button>
-                  <span>0{i + 1}</span>
-                </div>
-                <div className="pmeta">
-                  <div><small>YASSOU STYLE</small><h3>{t.productNames[i]}</h3></div>
-                  <strong>{t.prices[i]}</strong>
-                </div>
-              </article>
-            ))}
+          <div className={"products products-" + viewMode}>
+            {images.products.map((p, i) => {
+              const photo = p.photos[photoIndexes[i] || 0];
+              return (
+                <article className="product" key={p.name[2]} onClick={() => setSelectedProduct(i)}>
+                  <div className="pic productSwipe" data-index={i}>
+                    <img src={photo} alt={p.name[lang === "ar" ? 0 : lang === "fr" ? 1 : 2]} draggable="false" />
+                    <button className="quickAdd" onClick={(e) => { e.stopPropagation(); setCart(cart + 1); }}>{t.add} +</button>
+                    <span>0{i + 1}</span>
+                    <div className="swipeDots">{p.photos.map((_, pi) => <i key={pi} className={pi === (photoIndexes[i] || 0) ? "active" : ""} />)}</div>
+                    <div className="swipeHint">{rtl ? "اسحبي للصور" : lang === "fr" ? "GLISSEZ POUR LES PHOTOS" : "SWIPE FOR PHOTOS"}</div>
+                  </div>
+                  <div className="pmeta">
+                    <div><small>YASSOU STYLE</small><h3>{p.name[lang === "ar" ? 0 : lang === "fr" ? 1 : 2]}</h3></div>
+                    <strong>{p.price[lang === "ar" ? 0 : lang === "fr" ? 1 : 2]}</strong>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
 
-        <section id="story" className="statement">
-          <div className="statementImg"><img src={images.story} alt={t.house} /></div>
-          <div>
-            <span>03 — {t.house}</span>
-            <h2>{lang === "ar" ? <>ماشي غير<br /><i>متجر.</i></> : lang === "fr" ? <>PAS JUSTE<br /><i>UNE BOUTIQUE.</i></> : <>NOT JUST<br /><i>A STORE.</i></>}</h2>
-            <p>{t.storyText}</p>
-            <div className="signature">Yassou ✦</div>
-          </div>
-        </section>
-
-        <section className="services">
-          {t.services.map(([n, title, desc]) => (
-            <div key={n}><b>{n}</b><h3>{title}</h3><p>{desc}</p></div>
-          ))}
-        </section>
-
-        <section id="contact" className="contact">
-          <span>04 — {t.connect}</span>
-          <h2>{t.enterWorld}<br /><i>YASSOU WORLD.</i></h2>
-          <div><input placeholder={t.email} /><button>{t.join} ↗</button></div>
-        </section>
-      </main>
-
-      <footer>
-        <div><a className="logo">YASSOU<span>STYLE</span></a><p>{t.signature}</p></div>
-        <div><small>{t.exploreLabel}</small><a>{t.nav[0]}</a><a>{t.nav[1]}</a><a>{t.nav[2]}</a></div>
-        <div><small>{t.connectLabel}</small><a>Instagram</a><a>TikTok</a><a>{t.location}</a></div>
-        <div className="copy">{t.rights}</div>
-      </footer>
-    </div>
-  );
-}
-
-export default App;
+;
