@@ -1,6 +1,0 @@
-{
-  "name": "STYLE YOU | متجر الأزياء ومستحضرات التجميل الفاخرة",
-  "description": "متجر STYLE YOU للأزياء ومستحضرات التجميل والعطور الفاخرة بطابع عصري راقي.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
