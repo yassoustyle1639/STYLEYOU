@@ -172,8 +172,29 @@ const images = {
             {images.products.map((p, i) => {
               const photo = p.photos[photoIndexes[i] || 0];
               return (
-                <article className="product" key={p.name[2]} onClick={() => setSelectedProduct(i)}>
-                  <div className="pic productSwipe" data-index={i}>
+                <article className="product" key={p.name[2]} onClick={() => !swiping && setSelectedProduct(i)}>
+                  <div
+                    className="pic productSwipe"
+                    data-index={i}
+                    onPointerDown={(e) => {
+                      swipeStart.x = e.clientX;
+                      swipeStart.index = photoIndexes[i] || 0;
+                      setSwiping(false);
+                      e.currentTarget.setPointerCapture?.(e.pointerId);
+                    }}
+                    onPointerUp={(e) => {
+                      const dx = e.clientX - swipeStart.x;
+                      if (Math.abs(dx) > 35) {
+                        const next = dx < 0
+                          ? (swipeStart.index + 1) % p.photos.length
+                          : (swipeStart.index - 1 + p.photos.length) % p.photos.length;
+                        setPhotoIndexes(s => ({...s, [i]: next}));
+                        setSwiping(true);
+                        window.setTimeout(() => setSwiping(false), 80);
+                      }
+                    }}
+                    onPointerCancel={() => setSwiping(false)}
+                  >
                     <img src={photo} alt={p.name[lang === "ar" ? 0 : lang === "fr" ? 1 : 2]} draggable="false" />
                     <button className="quickAdd" onClick={(e) => { e.stopPropagation(); setCart(cart + 1); }}>{t.add} +</button>
                     <span>0{i + 1}</span>
