@@ -40,7 +40,7 @@ export const Footer: React.FC<FooterProps> = ({
                 {t.newsletterTitle}
               </span>
               <h3 className="font-serif-luxury text-2xl sm:text-3xl font-bold text-[#F8F7F2]">
-                {language === 'ar' ? 'انضم إلى دائرة النخبة الخاصة بـ STYLE YOU' : 'Step Into the Inner Circle of STYLE YOU'}
+                {language === 'ar' ? 'انضم إلى دائرة النخبة الخاصة بـ YASSOU STYLE' : 'Step Into the Inner Circle of YASSOU STYLE'}
               </h3>
               <p className="text-xs text-[#9E9789] max-w-md">
                 {t.newsletterSubtitle}
