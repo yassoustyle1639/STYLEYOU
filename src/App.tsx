@@ -316,6 +316,60 @@ export default function App() {
         onOpenAiStylist={() => setIsAiStylistOpen(true)}
       />
 
+      {/* YASSOU STYLE Luxury Hero */}
+      <section className="relative min-h-[78vh] flex items-center overflow-hidden border-b border-[#D4AF37]/20">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=85&w=2200&auto=format&fit=crop')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/75 to-[#050505]/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-[#070709]/20" />
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-10 py-20 sm:py-28">
+          <div className="max-w-2xl space-y-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/50 bg-black/35 px-4 py-2 text-[10px] sm:text-xs tracking-[0.28em] uppercase text-[#F3E5AB] backdrop-blur-sm">
+              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" /> YASSOU STYLE
+            </span>
+            <h1 className="font-serif-luxury text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-[0.08em] text-[#FAF7F0]">
+              YASSOU <span className="gold-gradient-text">STYLE</span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-[#F3E5AB] font-light tracking-wide">Your style. Your signature.</p>
+            <p className="text-base sm:text-lg text-[#E7E1D5] leading-relaxed max-w-xl">فخامتك تبدأ من اختيارك.</p>
+            <p className="text-sm sm:text-base text-[#BDB6A8] leading-7 max-w-xl">{t.heroSubtitle}</p>
+            <div className="flex flex-col sm:flex-row gap-3 pt-3">
+              <button onClick={scrollToCatalog} className="gold-btn px-7 py-3.5 rounded-xl text-sm font-extrabold">{t.heroCtaShop}</button>
+              <button onClick={() => setIsAiStylistOpen(true)} className="px-7 py-3.5 rounded-xl text-sm font-bold border border-[#D4AF37]/60 bg-black/35 text-[#F3E5AB] hover:bg-[#D4AF37]/10 transition-all">{t.heroCtaAdvisor}</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signature Categories */}
+      <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div className="flex items-end justify-between gap-4 mb-7">
+          <div><span className="text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">{t.curatedHighlights}</span><h2 className="font-serif-luxury text-2xl sm:text-3xl mt-2 text-[#FAF7F0]">{language === 'ar' ? 'اختاري بصمتك' : language === 'fr' ? 'Choisissez votre signature' : 'Choose your signature'}</h2></div>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+          {[
+            {cat:'clothing' as Category, title:t.clothing, image:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop'},
+            {cat:'cosmetics' as Category, title:t.cosmetics, image:'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=900&auto=format&fit=crop'},
+            {cat:'fragrance' as Category, title:t.fragrance, image:'https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?q=80&w=900&auto=format&fit=crop'},
+            {cat:'accessories' as Category, title:t.accessories, image:'https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=900&auto=format&fit=crop'}
+          ].map((item) => (
+            <button key={item.cat} onClick={() => { setSelectedCategory(item.cat); scrollToCatalog(); }} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#D4AF37]/20 bg-[#111116] text-start">
+              <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute inset-x-4 bottom-4"><div className="text-[10px] uppercase tracking-[0.18em] text-[#D4AF37] mb-1">YASSOU STYLE</div><div className="text-sm sm:text-base font-bold text-white">{item.title}</div></div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Brand Promise */}
+      <section id="perks" className="border-y border-[#D4AF37]/15 bg-[#0C0C10]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 lg:grid-cols-4 gap-5">
+          {[['✦',t.perkAuthentic,t.perkAuthenticDesc],['◈',t.perkPackaging,t.perkPackagingDesc],['◇',t.perkShipping,t.perkShippingDesc],['✧',t.perkSupport,t.perkSupportDesc]].map(([icon,title,desc])=>(
+            <div key={title} className="space-y-2"><div className="text-[#D4AF37] text-xl">{icon}</div><h3 className="text-xs sm:text-sm font-bold text-[#F8F4EA]">{title}</h3><p className="text-[10px] sm:text-xs text-[#8C867A] leading-5">{desc}</p></div>
+          ))}
+        </div>
+      </section>
+
       {/* Main Catalog Section */}
       <main id="catalog-section" className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8 overflow-hidden">
 
