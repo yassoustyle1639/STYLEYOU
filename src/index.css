@@ -1165,3 +1165,39 @@ header{z-index:50!important}
     flex:0 0 auto!important;
   }
 }
+
+
+/* FILTER ROW — keep "الكل" fixed, scroll only the other filters */
+.shopHead .shopViewTools .categoryPills{
+  position:relative!important;
+  overflow:hidden!important;
+  min-width:0!important;
+  flex:0 1 auto!important;
+}
+.shopHead .shopViewTools .categoryPills button:first-child{
+  position:sticky!important;
+  left:0!important;
+  right:auto!important;
+  z-index:4!important;
+  flex:0 0 auto!important;
+  color:#e8c978!important;
+  background:rgba(210,173,98,.10)!important;
+  border-color:rgba(210,173,98,.40)!important;
+}
+.rtl .shopHead .shopViewTools .categoryPills button:first-child{
+  position:sticky!important;
+  right:0!important;
+  left:auto!important;
+}
+.shopHead .shopViewTools .categoryPills{
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  justify-content:flex-start!important;
+}
+.shopHead .shopViewTools .categoryPills::-webkit-scrollbar{display:none!important}
+.shopHead .shopViewTools .categoryPills button{
+  flex:0 0 auto!important;
+}
