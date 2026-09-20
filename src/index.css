@@ -306,3 +306,11 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
     left:9px!important;
   }
 }
+
+
+/* FINAL CART ICON VISIBILITY FIX */
+.shop .product .pmeta .quickAdd{z-index:50!important;visibility:visible!important;opacity:1!important;overflow:visible!important;color:#e2c27d!important;pointer-events:auto!important}
+.shop .product .pmeta .quickAdd .cartIcon,.shop .product .pmeta .quickAdd .cartIcon svg{visibility:visible!important;opacity:1!important;overflow:visible!important}
+.shop .product .pmeta .quickAdd .cartIcon svg{width:30px!important;height:30px!important;stroke:#e2c27d!important;stroke-width:1.9!important;fill:none!important}
+.shop .product .pmeta .quickAdd .cartIcon svg path,.shop .product .pmeta .quickAdd .cartIcon svg circle{stroke:#e2c27d!important;fill:none!important;vector-effect:non-scaling-stroke!important}
+@media(max-width:640px){.shop .product .pmeta .quickAdd .cartIcon svg{width:27px!important;height:27px!important}}
