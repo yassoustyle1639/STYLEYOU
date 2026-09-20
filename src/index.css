@@ -422,3 +422,97 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
     drop-shadow(0 1px 1px rgba(0,0,0,.7))
     drop-shadow(0 0 7px rgba(240,209,132,.35))!important;
 }
+
+
+/* EXACT PRODUCT CARD INFO LAYOUT — FINAL */
+.shop .product .pmeta{
+  display:block!important;
+  min-height:82px!important;
+  padding:13px 16px!important;
+  position:relative!important;
+}
+.shop .product .pmeta .productName{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  height:22px!important;
+}
+.shop .product .pmeta .productName h3{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  font-size:14px!important;
+  line-height:22px!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.shop .product .pmeta .productBuyRow{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:max-content!important;
+  max-width:100%!important;
+  gap:10px!important;
+  margin:5px 0 0!important;
+}
+.shop .product .pmeta .productBuyRow strong{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  font-size:15px!important;
+  line-height:28px!important;
+  white-space:nowrap!important;
+  color:#e2c27d!important;
+}
+.shop .product .pmeta .productBuyRow .quickAdd{
+  position:static!important;
+  display:grid!important;
+  place-items:center!important;
+  width:28px!important;
+  height:28px!important;
+  min-width:28px!important;
+  flex:0 0 28px!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.shop .product .pmeta .productBuyRow .quickAdd .cartIcon,
+.shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
+  width:27px!important;
+  height:27px!important;
+}
+@media(max-width:640px){
+  .shop .product .pmeta{
+    min-height:78px!important;
+    padding:10px 9px!important;
+  }
+  .shop .product .pmeta .productName h3{
+    font-size:12px!important;
+    line-height:20px!important;
+  }
+  .shop .product .pmeta .productName{
+    height:20px!important;
+  }
+  .shop .product .pmeta .productBuyRow{
+    gap:8px!important;
+    margin-top:4px!important;
+  }
+  .shop .product .pmeta .productBuyRow strong{
+    font-size:13px!important;
+    line-height:26px!important;
+  }
+  .shop .product .pmeta .productBuyRow .quickAdd{
+    width:25px!important;
+    height:25px!important;
+    min-width:25px!important;
+    flex-basis:25px!important;
+  }
+  .shop .product .pmeta .productBuyRow .quickAdd .cartIcon,
+  .shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
+    width:24px!important;
+    height:24px!important;
+  }
+}
