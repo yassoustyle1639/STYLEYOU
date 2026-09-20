@@ -197,8 +197,7 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 
 /* Smooth swipe — images slide naturally instead of replacing */
 .productSwipe{overflow:hidden!important;touch-action:pan-y pinch-zoom!important}.productSwipe .productImageSmooth{animation:none!important;transition:transform .42s cubic-bezier(.22,.75,.2,1),opacity .18s ease!important;will-change:transform!important}
-.productSwipe .productImageSmooth.is-swiping{transition:none!important}
-\n.shop .product .pmeta .quickAdd .cartIcon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px}.shop .product .pmeta .quickAdd .cartIcon svg{width:19px;height:19px;display:block}.shop .product .pmeta .quickAdd{font-size:0!important;letter-spacing:0!important}.shop .product .pmeta .quickAdd .cartIcon{color:#080705!important}\n
+.productSwipe .productImageSmooth.is-swiping{transition:none!important}\n.shop .product .pmeta .quickAdd .cartIcon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px}.shop .product .pmeta .quickAdd .cartIcon svg{width:19px;height:19px;display:block}.shop .product .pmeta .quickAdd{font-size:0!important;letter-spacing:0!important}.shop .product .pmeta .quickAdd .cartIcon{color:#080705!important}\n
 
 /* Exact favorite heart: same outline, red fill when selected */
 .shop .product .pic .favorite svg{
@@ -397,7 +396,6 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
     height:28px!important;
   }
 }
-
 /* FINAL ELEGANT GOLD CART ICON */
 .shop .product .pmeta .quickAdd{
   color:#d8b45f!important;
@@ -597,8 +595,7 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
   height:27px!important;
   visibility:visible!important;
   opacity:1!important;
-}
-.shop .products .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
+}.shop .products .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
   stroke:#d8b45f!important;
   stroke-width:1.7!important;
   fill:none!important;
@@ -797,8 +794,7 @@ header{z-index:50!important}
 .shop .product .pic .favorite svg{
   width:36px!important;
   height:36px!important;
-  filter:none!important;
-  box-shadow:none!important;
+  filter:none!important;  box-shadow:none!important;
 }
 .shop .product .pic .favorite svg path{
   fill:transparent!important;
@@ -997,8 +993,7 @@ header{z-index:50!important}
   .shopHead{
     margin-bottom:18px!important;
   }
-  .shopViewTools{
-    width:100%!important;
+  .shopViewTools{    width:100%!important;
     justify-content:flex-start!important;
     gap:7px!important;
     overflow:hidden!important;
@@ -1198,6 +1193,20 @@ header{z-index:50!important}
   justify-content:flex-start!important;
 }
 .shopHead .shopViewTools .categoryPills::-webkit-scrollbar{display:none!important}
-.shopHead .shopViewTools .categoryPills button{
-  flex:0 0 auto!important;
+/* FINAL FILTER ALIGNMENT — gold ALL pill + sort field aligned on the same row */
+.shopHead .shopViewTools .categoryPills button:first-child,
+.shopHead .shopViewTools .categoryPills button:first-child.active{
+  color:#080808!important;
+  background:#d2ad62!important;
+  border-color:#d2ad62!important;
+  box-shadow:none!important;
+}
+.shopHead .shopViewTools .sortBox{
+  align-self:center!important;
+  transform:translateY(3px)!important;
+}
+@media(max-width:640px){
+  .shopHead .shopViewTools .sortBox{
+    transform:translateY(2px)!important;
+  }
 }
