@@ -200,3 +200,4 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 .productSwipe{overflow:hidden!important;touch-action:pan-y pinch-zoom!important}
 .productSwipe .productImageSmooth{animation:none!important;transition:transform .42s cubic-bezier(.22,.75,.2,1),opacity .18s ease!important;will-change:transform!important}
 .productSwipe .productImageSmooth.is-swiping{transition:none!important}
+\n.shop .product .pmeta .quickAdd .cartIcon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px}.shop .product .pmeta .quickAdd .cartIcon svg{width:19px;height:19px;display:block}.shop .product .pmeta .quickAdd{font-size:0!important;letter-spacing:0!important}.shop .product .pmeta .quickAdd .cartIcon{color:#080705!important}\n
