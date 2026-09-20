@@ -830,3 +830,30 @@ header{z-index:50!important}
     height:31px!important;
   }
 }
+
+
+/* VIEW TOGGLE — match the clean control style */
+.shopHead .viewToggle{
+  padding:0!important;
+  gap:6px!important;
+  border:0!important;
+  background:transparent!important;
+  border-radius:0!important;
+}
+.shopHead .viewToggle button{
+  width:38px!important;
+  height:34px!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  background:transparent!important;
+  color:#9d9d9d!important;
+  border-radius:10px!important;
+}
+.shopHead .viewToggle button.active{
+  color:#e8c978!important;
+  background:rgba(210,173,98,.08)!important;
+  border-color:rgba(210,173,98,.45)!important;
+}
+@media(max-width:640px){
+  .shopHead .viewToggle{gap:5px!important}
+  .shopHead .viewToggle button{width:34px!important;height:30px!important;border-radius:9px!important}
+}
