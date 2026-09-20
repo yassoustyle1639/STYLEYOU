@@ -97,8 +97,7 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
   color: var(--white);
   font-family: "Manrope", "Tajawal", Arial, sans-serif;
   font-size: clamp(15px, 1.4vw, 19px);
-  font-weight: 600;
-  line-height: 1.35;
+  font-weight: 600;  line-height: 1.35;
   letter-spacing: .01em;
   margin: 0;
   text-shadow: 0 1px 10px rgba(0,0,0,.8);
@@ -197,7 +196,33 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 @media(max-width:640px){.shop .product .pic .favorite{width:36px!important;height:36px!important;top:8px!important;right:8px!important;font-size:29px!important;line-height:36px!important}.rtl .shop .product .pic .favorite{right:auto!important;left:8px!important}.shop .product .pmeta{min-height:145px!important;padding:13px 10px 12px!important}.shop .product .pmeta .quickAdd{height:38px!important;margin-top:7px!important;font-size:8px!important}}
 
 /* Smooth swipe — images slide naturally instead of replacing */
-.productSwipe{overflow:hidden!important;touch-action:pan-y pinch-zoom!important}
-.productSwipe .productImageSmooth{animation:none!important;transition:transform .42s cubic-bezier(.22,.75,.2,1),opacity .18s ease!important;will-change:transform!important}
+.productSwipe{overflow:hidden!important;touch-action:pan-y pinch-zoom!important}.productSwipe .productImageSmooth{animation:none!important;transition:transform .42s cubic-bezier(.22,.75,.2,1),opacity .18s ease!important;will-change:transform!important}
 .productSwipe .productImageSmooth.is-swiping{transition:none!important}
 \n.shop .product .pmeta .quickAdd .cartIcon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px}.shop .product .pmeta .quickAdd .cartIcon svg{width:19px;height:19px;display:block}.shop .product .pmeta .quickAdd{font-size:0!important;letter-spacing:0!important}.shop .product .pmeta .quickAdd .cartIcon{color:#080705!important}\n
+
+/* Exact favorite heart: same outline, red fill when selected */
+.shop .product .pic .favorite svg{
+  width:31px!important;
+  height:31px!important;
+  display:block!important;
+  overflow:visible!important;
+}
+.shop .product .pic .favorite svg path{
+  fill:transparent!important;
+  stroke:#d8b45f!important;
+  stroke-width:1.55!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  transition:fill .18s ease,stroke .18s ease,filter .18s ease!important;
+}
+.shop .product .pic .favorite.active svg path{
+  fill:#ef2633!important;
+  stroke:#d8b45f!important;
+  filter:drop-shadow(0 0 5px rgba(239,38,51,.28))!important;
+}
+@media(max-width:640px){
+  .shop .product .pic .favorite svg{
+    width:27px!important;
+    height:27px!important;
+  }
+}
