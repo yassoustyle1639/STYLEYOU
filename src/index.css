@@ -699,550 +699,76 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 }
 
 
-/* ═════════════════════════════════════════════════════════════
-   CRYSTAL MODERN UI — soft glass, flowing curves, no hard boxes
-   ═════════════════════════════════════════════════════════════ */
-:root{
-  --glass:rgba(255,255,255,.045);
-  --glass-strong:rgba(255,255,255,.075);
-  --glass-line:rgba(255,255,255,.12);
-  --glass-soft:rgba(255,255,255,.065);
-  --gold-glow:rgba(226,194,125,.20);
-}
 
-/* softer overall canvas */
-body{
-  background:
-    radial-gradient(900px 500px at 8% -5%,rgba(226,194,125,.075),transparent 62%),
-    radial-gradient(800px 520px at 95% 28%,rgba(255,255,255,.035),transparent 65%),
-    #050505;
-}
-main,.intro,.shop,.collections,.social,.newsletter{
-  position:relative;
-}
-main:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-  background:
-    radial-gradient(500px 300px at 50% 35%,rgba(255,255,255,.018),transparent 70%);
-}
 
-/* header becomes a floating crystal bar */
-header{
-  position:fixed;
-  top:39px;
-  left:4vw;
-  right:4vw;
-  width:auto;
-  height:68px;
-  padding:0 24px;
-  border:1px solid var(--glass-line);
-  border-radius:24px;
-  background:rgba(10,10,10,.58);
-  backdrop-filter:blur(22px) saturate(130%);
-  -webkit-backdrop-filter:blur(22px) saturate(130%);
-  box-shadow:
-    0 14px 45px rgba(0,0,0,.28),
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 0 30px rgba(226,194,125,.035);
-}
-.announcement{
-  height:39px;
-  padding:11px 8px;
-  background:rgba(13,13,13,.78);
-  border-bottom:1px solid rgba(255,255,255,.07);
-  border-radius:0 0 18px 18px;
-}
-
-/* rounded navigation chips */
-nav{
-  gap:7px;
-}
-nav a,.tools button{
-  padding:9px 13px;
-  border:1px solid transparent;
-  border-radius:999px;
-  transition:all .25s ease;
-}
-nav a:hover,.tools button:hover{
-  color:var(--gold2);
-  background:rgba(255,255,255,.055);
-  border-color:rgba(226,194,125,.18);
-}
-
-/* logo stays clean */
-.logo{
-  padding:7px 18px;
-  border-radius:999px;
-  background:rgba(255,255,255,.025);
-  border:1px solid rgba(255,255,255,.06);
-}
-
-/* all controls use fluid curves */
-button,.cta,.shopHead button,.viewToggle button,
-.categoryPills button,.searchBox,select.sortBox,
-.checkoutButton,.modalAdd,.textButton{
-  border-radius:999px;
-}
-
-/* search + filters: glass instead of rectangles */
-.shopControls{
-  gap:12px;
-  padding:12px;
-  margin-bottom:30px;
-  border:1px solid var(--glass-line);
-  border-radius:28px;
-  background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  box-shadow:
-    0 16px 45px rgba(0,0,0,.18),
-    inset 0 1px 0 rgba(255,255,255,.055);
-}
-.searchBox{
-  min-height:46px;
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.045);
-  padding:11px 16px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.045);
-}
-.searchBox:focus-within{
-  border-color:rgba(226,194,125,.42);
-  box-shadow:0 0 0 4px rgba(226,194,125,.055),inset 0 1px 0 rgba(255,255,255,.06);
-}
-.categoryPills{
-  gap:7px;
-  scrollbar-width:none;
-}
-.categoryPills::-webkit-scrollbar{display:none}
-.categoryPills button{
-  border:1px solid rgba(255,255,255,.08);
-  background:rgba(255,255,255,.025);
-  padding:10px 15px;
-}
-.categoryPills button.active,.categoryPills button:hover{
-  background:rgba(226,194,125,.10);
-  border-color:rgba(226,194,125,.45);
-  box-shadow:0 5px 18px rgba(226,194,125,.07);
-}
-select.sortBox{
-  min-height:44px;
-  border:1px solid rgba(255,255,255,.09);
-  background:rgba(255,255,255,.035);
-  padding:10px 15px;
-}
-
-/* modern product cards — crystal shell, soft depth */
-.shop .product{
-  border-radius:32px!important;
-  padding:1px!important;
-  background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(226,194,125,.16) 35%,rgba(255,255,255,.045) 72%,rgba(255,255,255,.12))!important;
-  box-shadow:
-    0 20px 55px rgba(0,0,0,.38),
-    0 0 0 1px rgba(255,255,255,.055),
-    0 0 35px rgba(226,194,125,.045)!important;
-  overflow:hidden!important;
-  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease!important;
-}
-.shop .product:before{
-  display:none!important;
-}
-.shop .product:after{
-  inset:1px!important;
-  border-radius:31px!important;
-  border:1px solid rgba(255,255,255,.07)!important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    inset 0 0 35px rgba(255,255,255,.018)!important;
-}
-.shop .product:hover{
-  transform:translateY(-7px)!important;
-  box-shadow:
-    0 28px 70px rgba(0,0,0,.48),
-    0 0 0 1px rgba(226,194,125,.24),
-    0 0 38px rgba(226,194,125,.10)!important;
-}
-.shop .product .pic{
-  border:0!important;
-  border-radius:31px 31px 22px 22px!important;
-  background:#0b0b0b;
-}
-.shop .product .pic img{
-  filter:grayscale(8%) contrast(1.02)!important;
-  transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .7s ease!important;
-}
-.shop .product:hover .pic img{
-  transform:scale(1.045)!important;
-  filter:grayscale(0%) contrast(1.03)!important;
-}
-.shop .product .pmeta{
-  margin:0 7px 7px!important;
-  min-height:88px!important;
-  padding:14px 16px!important;
-  border:1px solid rgba(255,255,255,.075)!important;
-  border-radius:22px!important;
-  background:
-    linear-gradient(135deg,rgba(255,255,255,.065),rgba(255,255,255,.025)),
-    rgba(8,8,8,.72)!important;
-  backdrop-filter:blur(14px)!important;
-  -webkit-backdrop-filter:blur(14px)!important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.055),
-    0 7px 22px rgba(0,0,0,.16)!important;
-}
-.shop .product .pmeta .productName h3{
-  font-size:14px!important;
-  font-weight:600!important;
-}
-.shop .product .pmeta .productBuyRow{
-  position:relative!important;
-  display:block!important;
-  width:100%!important;
-  height:30px!important;
-  margin-top:5px!important;
-}
-.shop .product .pmeta .productBuyRow strong{
-  position:absolute!important;
-  left:0!important;
-  right:auto!important;
-  bottom:0!important;
-  line-height:30px!important;
-  font-size:16px!important;
-}
-.shop .product .pmeta .productBuyRow .quickAdd{
-  position:absolute!important;
-  right:0!important;
-  left:auto!important;
-  bottom:0!important;
-  width:30px!important;
-  height:30px!important;
-  min-width:30px!important;
-}
-.rtl .shop .product .pmeta .productBuyRow strong{
-  left:auto!important;
-  right:0!important;
-}
-.rtl .shop .product .pmeta .productBuyRow .quickAdd{
-  right:auto!important;
-  left:0!important;
-}
-.shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
-  width:29px!important;
-  height:29px!important;
-}
-
-/* favorite becomes a floating glass orb */
-.shop .product .pic .favorite{
-  top:13px!important;
-  right:13px!important;
-  bottom:auto!important;
-  left:auto!important;
-  width:44px!important;
-  height:44px!important;
-  border:1px solid rgba(255,255,255,.16)!important;
-  border-radius:50%!important;
-  background:rgba(5,5,5,.42)!important;
-  backdrop-filter:blur(12px)!important;
-  -webkit-backdrop-filter:blur(12px)!important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.12),
-    0 7px 20px rgba(0,0,0,.28)!important;
-}
-.rtl .shop .product .pic .favorite{
-  right:auto!important;
-  left:13px!important;
-}
-.shop .product .pic .favorite svg{
-  width:29px!important;
-  height:29px!important;
+/* GLOBAL LUXURY SYSTEM — editorial hierarchy, consistent spacing */
+:root{--site-max:1440px;--gold:#d2ad62;--gold-soft:#ead18e;--ink:#070707;--line:rgba(255,255,255,.10)}
+body{background:#050505;color:#f7f3ea;letter-spacing:.01em}
+main{max-width:var(--site-max);margin:0 auto}
+header{z-index:50!important}
+.intro{max-width:1180px;margin:0 auto;padding:92px 5vw 34px!important}
+.shop,.collections,.social,.newsletter{max-width:1380px;margin:0 auto;padding-left:5vw!important;padding-right:5vw!important}
+.shop{padding-top:70px!important}
+.shopControls{display:grid!important;grid-template-columns:minmax(240px,1.15fr) minmax(0,2fr) auto!important;align-items:center!important;gap:14px!important;padding:10px!important;margin-bottom:64px!important;background:rgba(255,255,255,.025)!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:18px!important;box-shadow:none!important;backdrop-filter:none!important}
+.searchBox{height:46px!important;min-width:0!important;background:#0c0c0c!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:12px!important}
+.categoryPills{display:flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;overflow:auto!important}
+.categoryPills button{height:40px!important;padding:0 14px!important;background:transparent!important;border:1px solid transparent!important;border-radius:999px!important;color:#aaa!important;white-space:nowrap!important}
+.categoryPills button.active{color:#f3d993!important;background:rgba(210,173,98,.10)!important;border-color:rgba(210,173,98,.32)!important}
+.sortBox{height:46px!important;background:#0c0c0c!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:12px!important}
+.shopHead{margin-bottom:34px!important;align-items:end!important}
+.shopHead h2,.sectionTitle h2{font-size:clamp(42px,6vw,86px)!important;line-height:.92!important;letter-spacing:-.045em!important}
+.products{display:grid!important;gap:26px!important}
+.products-2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.products-1{grid-template-columns:minmax(0,760px)!important;justify-content:center!important}
+.shop .product{border-radius:24px!important;padding:2px!important;overflow:hidden!important;box-shadow:0 18px 45px rgba(0,0,0,.42),0 0 0 1px rgba(240,213,143,.18)!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.shop .product:before{inset:0!important;border-radius:22px!important}
+.shop .product:after{inset:4px!important;border-radius:20px!important}
+.shop .product:hover{transform:translateY(-4px)!important;box-shadow:0 24px 55px rgba(0,0,0,.5),0 0 0 1px rgba(240,213,143,.34)!important}
+.shop .product .pic{aspect-ratio:1/1.18!important;border-radius:21px 21px 16px 16px!important;background:#0b0b0b!important}
+.shop .product .pic img{object-fit:cover!important}
+.shop .product .pmeta{margin:0!important;min-height:92px!important;padding:15px 16px 14px!important;border:0!important;border-radius:0!important;background:#080808!important;backdrop-filter:none!important}
+.shop .product .pmeta .productName h3{font-size:15px!important;line-height:1.35!important;font-weight:500!important;letter-spacing:.01em!important}
+.shop .product .pmeta .productBuyRow{height:34px!important;margin-top:7px!important}
+.shop .product .pmeta .productBuyRow strong{font-size:17px!important;line-height:34px!important;color:#e9c977!important;font-weight:600!important}
+.shop .product .pmeta .productBuyRow .quickAdd{width:34px!important;height:34px!important;min-width:34px!important;background:none!important;border:0!important;padding:0!important}
+.shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{width:27px!important;height:27px!important}
+.shop .product .pic .favorite{width:40px!important;height:40px!important;top:12px!important;right:12px!important;background:rgba(5,5,5,.62)!important;border:1px solid rgba(240,213,143,.50)!important;box-shadow:0 8px 24px rgba(0,0,0,.35)!important}
+.shop .product .pic .favorite svg{width:27px!important;height:27px!important}
+.rtl .shop .product .pic .favorite{right:auto!important;left:12px!important}
+.statement,.services,.collections,.social,.newsletter,.contact{max-width:1380px;margin-left:auto;margin-right:auto}
+.statement{padding-left:5vw!important;padding-right:5vw!important}
+.services{padding-left:5vw!important;padding-right:5vw!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:0!important;border-top:1px solid rgba(255,255,255,.09)!important;border-bottom:1px solid rgba(255,255,255,.09)!important}
+.services>div{border:0!important;border-right:1px solid rgba(255,255,255,.09)!important;border-radius:0!important;background:none!important;box-shadow:none!important;padding:30px 24px!important}
+.services>div:first-child{border-right:0!important}
+.collections,.social,.newsletter{padding-top:110px!important;padding-bottom:110px!important}
+.collectionGrid{gap:18px!important}
+.collectionGrid article,.socialGrid a{border-radius:18px!important;border:1px solid rgba(255,255,255,.09)!important;box-shadow:none!important}
+.newsletter{border-top:1px solid rgba(255,255,255,.09)!important}
+@media(max-width:900px){
+ .shopControls{grid-template-columns:1fr!important}
+ .categoryPills{justify-content:flex-start!important}
+ .services{grid-template-columns:repeat(2,1fr)!important}
+ .services>div:nth-child(2n){border-right:0!important}
 }
 @media(max-width:640px){
-  .shop .product .pic .favorite{
-    top:8px!important;
-    right:8px!important;
-    width:37px!important;
-    height:37px!important;
-  }
-  .rtl .shop .product .pic .favorite{right:auto!important;left:8px!important}
-}
-
-/* section titles feel like flowing editorial panels */
-.shop,.collections,.social,.newsletter{
-  padding-top:105px;
-  padding-bottom:105px;
-}
-.shopHead h2,.sectionTitle h2,.newsletter h2,.contact h2,.statement h2{
-  text-shadow:0 10px 35px rgba(0,0,0,.35);
-}
-.viewToggle{
-  padding:5px;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:999px;
-  background:rgba(255,255,255,.035);
-}
-.viewToggle button{
-  width:36px;
-  height:32px;
-  border:0!important;
-}
-.viewToggle button.active{
-  background:rgba(226,194,125,.13);
-  box-shadow:0 4px 14px rgba(226,194,125,.08);
-}
-
-/* collections / social images become organic glass tiles */
-.collectionGrid,.socialGrid{
-  gap:14px;
-}
-.collectionGrid article,.socialGrid a{
-  border-radius:30px;
-  border:1px solid rgba(255,255,255,.09);
-  box-shadow:0 18px 45px rgba(0,0,0,.28);
-}
-.collectionGrid article{
-  overflow:hidden;
-}
-.socialGrid a{
-  overflow:hidden;
-}
-.collectionGrid article:after{
-  background:linear-gradient(transparent 35%,rgba(0,0,0,.84));
-}
-
-/* services become floating pills instead of boxed columns */
-.services{
-  border-top:0;
-  border-bottom:0;
-  gap:12px;
-  padding-top:55px;
-  padding-bottom:55px;
-}
-.services>div{
-  border:1px solid rgba(255,255,255,.08)!important;
-  border-radius:26px;
-  padding:25px!important;
-  background:rgba(255,255,255,.028);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.045);
-}
-.rtl .services>div{border:1px solid rgba(255,255,255,.08)!important}
-
-/* newsletter/contact forms */
-.newsletter form,.contact div{
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:999px;
-  background:rgba(255,255,255,.035);
-  padding:4px 7px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
-}
-.newsletter input,.contact input{
-  padding:13px 17px;
-}
-.newsletter button{
-  padding:10px 18px;
-  border-radius:999px;
-  background:rgba(226,194,125,.09);
-}
-
-/* cart drawer + checkout become glass panels */
-.cartDrawer{
-  margin:12px;
-  top:12px;
-  bottom:12px;
-  width:min(460px,calc(94vw - 24px));
-  border:1px solid rgba(255,255,255,.11)!important;
-  border-radius:30px;
-  background:rgba(10,10,10,.78);
-  backdrop-filter:blur(24px) saturate(120%);
-  -webkit-backdrop-filter:blur(24px) saturate(120%);
-  box-shadow:0 25px 70px rgba(0,0,0,.5);
-}
-.rtl .cartDrawer{
-  margin:12px;
-  border:1px solid rgba(255,255,255,.11)!important;
-}
-.checkoutPanel,.productModalInner,.quickInner{
-  border:1px solid rgba(255,255,255,.11)!important;
-  border-radius:30px;
-  background:rgba(10,10,10,.78)!important;
-  backdrop-filter:blur(24px) saturate(120%);
-  -webkit-backdrop-filter:blur(24px) saturate(120%);
-  box-shadow:0 30px 90px rgba(0,0,0,.55);
-}
-.checkoutPanel{overflow:hidden}
-.checkoutForm input,.checkoutForm textarea{
-  border:1px solid rgba(255,255,255,.08)!important;
-  border-radius:16px;
-  background:rgba(255,255,255,.035)!important;
-}
-.modalGallery,.modalGallery>img{
-  border-radius:29px 0 0 29px;
-}
-.quickInner>img{
-  border-radius:29px 0 0 29px;
-}
-.modalAdd,.checkoutButton{
-  background:rgba(226,194,125,.08);
-  transition:.25s ease;
-}
-.modalAdd:hover,.checkoutButton:hover{
-  background:var(--gold);
-}
-
-/* badges are soft capsules */
-.productBadge{
-  border:1px solid rgba(226,194,125,.35)!important;
-  border-radius:999px!important;
-  background:rgba(5,5,5,.52)!important;
-  backdrop-filter:blur(10px);
-}
-
-/* mobile spacing + floating header */
-@media(max-width:800px){
-  header{
-    top:39px;
-    left:3vw;
-    right:3vw;
-    height:60px;
-    padding:0 13px;
-    border-radius:20px;
-  }
-  .announcement{border-radius:0 0 16px 16px}
-  .logo{font-size:21px;padding:5px 11px}
-  .tools{gap:5px}
-  .tools button{padding:8px 9px}
-  .shopControls{
-    padding:9px;
-    border-radius:23px;
-  }
-  .services{
-    gap:10px;
-  }
-  .services>div{
-    border-radius:21px;
-  }
-  .collectionGrid article,.socialGrid a{
-    border-radius:24px;
-  }
-  .newsletter form,.contact div{
-    border-radius:22px;
-  }
-}
-@media(max-width:640px){
-  .shop .product{border-radius:24px!important}
-  .shop .product:after{border-radius:23px!important}
-  .shop .product .pic{border-radius:23px 23px 18px 18px!important}
-  .shop .product .pmeta{border-radius:18px!important;margin:0 5px 5px!important;min-height:82px!important;padding:11px 12px!important}
-  .shop .product .pmeta .productBuyRow{height:28px!important}
-  .shop .product .pmeta .productBuyRow strong{font-size:14px!important;line-height:28px!important}
-  .shop .product .pmeta .productBuyRow .quickAdd{width:28px!important;height:28px!important;min-width:28px!important}
-}
-
-/* remove any hard rectangular feel from common standalone surfaces */
-.editorialGrid article,.statementImg,.pic,.productModalInner,.quickInner{
-  border-radius:30px;
-}
-
-
-/* FINAL LUXURY ART-DIRECTION — coherent gold ring + calm glass */
-:root{
-  --lux-gold:#c9a45d;
-  --lux-gold-light:#f0d58f;
-  --lux-gold-dark:#76531e;
-}
-.shop .product{
-  padding:3px!important;
-  border-radius:31px!important;
-  background:
-    linear-gradient(145deg,
-      #5d3d10 0%,
-      #c79b43 13%,
-      #fff0b0 27%,
-      #b37e25 43%,
-      #f5d884 58%,
-      #80591e 75%,
-      #e2bd69 88%,
-      #55370d 100%)!important;
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.48),
-    0 0 0 1px rgba(255,239,181,.45),
-    0 0 18px rgba(201,164,93,.12)!important;
-}
-.shop .product:before{
-  display:block!important;
-  content:""!important;
-  position:absolute!important;
-  inset:1px!important;
-  z-index:-1!important;
-  border-radius:29px!important;
-  padding:1px!important;
-  background:linear-gradient(110deg,rgba(255,247,205,.9),rgba(111,76,22,.4),rgba(255,229,147,.95),rgba(91,60,13,.35),rgba(255,246,200,.8))!important;
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
-  -webkit-mask-composite:xor!important;
-  mask-composite:exclude!important;
-  filter:drop-shadow(0 0 5px rgba(226,194,125,.28))!important;
-}
-.shop .product:after{
-  inset:5px!important;
-  border-radius:26px!important;
-  border:1px solid rgba(255,239,181,.16)!important;
-  box-shadow:inset 0 0 22px rgba(255,214,116,.025)!important;
-}
-.shop .product .pic{
-  border-radius:27px 27px 20px 20px!important;
-  margin:0!important;
-  overflow:hidden!important;
-}
-.shop .product .pmeta{
-  margin:0 6px 6px!important;
-  min-height:84px!important;
-  padding:13px 15px!important;
-  border-radius:20px!important;
-  border:1px solid rgba(255,255,255,.075)!important;
-  background:linear-gradient(135deg,rgba(255,255,255,.065),rgba(255,255,255,.018))!important;
-  backdrop-filter:blur(12px)!important;
-  -webkit-backdrop-filter:blur(12px)!important;
-}
-.shop .product .pmeta .productBuyRow strong{
-  color:#efd184!important;
-  text-shadow:0 1px 10px rgba(226,194,125,.15)!important;
-}
-.shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{
-  stroke:#d8b45f!important;
-  filter:drop-shadow(0 1px 2px rgba(0,0,0,.8)) drop-shadow(0 0 5px rgba(226,194,125,.22))!important;
-}
-
-/* gold jewelry-like favorite */
-.shop .product .pic .favorite{
-  width:43px!important;height:43px!important;
-  top:13px!important;right:13px!important;bottom:auto!important;left:auto!important;
-  border:1px solid rgba(240,213,143,.48)!important;
-  border-radius:50%!important;
-  background:rgba(7,7,7,.38)!important;
-  backdrop-filter:blur(10px)!important;
-  -webkit-backdrop-filter:blur(10px)!important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.13),0 8px 22px rgba(0,0,0,.3),0 0 12px rgba(226,194,125,.08)!important;
-}
-.rtl .shop .product .pic .favorite{right:auto!important;left:13px!important}
-.shop .product .pic .favorite svg{width:29px!important;height:29px!important}
-.shop .product:hover{transform:translateY(-5px)!important}
-
-/* remove competing boxed look from product hover actions */
-.shop .product .pic button:not(.favorite){border-radius:999px!important}
-
-/* consistent soft controls */
-.searchBox,.categoryPills button,select.sortBox,.viewToggle,
-.newsletter form,.contact div{
-  border-radius:999px!important;
-}
-@media(max-width:640px){
-  .shop .product{border-radius:25px!important;padding:2px!important}
-  .shop .product:before{border-radius:23px!important}
-  .shop .product:after{border-radius:21px!important}
-  .shop .product .pic{border-radius:22px 22px 17px 17px!important}
-  .shop .product .pmeta{margin:0 4px 4px!important;border-radius:17px!important;min-height:80px!important;padding:10px 11px!important}
-  .shop .product .pic .favorite{width:37px!important;height:37px!important;top:8px!important;right:8px!important}
-  .rtl .shop .product .pic .favorite{right:auto!important;left:8px!important}
+ .intro{padding-top:70px!important}
+ .shop,.collections,.social,.newsletter,.statement,.services{padding-left:18px!important;padding-right:18px!important}
+ .shop{padding-top:45px!important}
+ .shopControls{margin-bottom:42px!important;padding:8px!important}
+ .products-2{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .shop .product{border-radius:18px!important;padding:2px!important}
+ .shop .product:before{border-radius:16px!important}
+ .shop .product:after{inset:3px!important;border-radius:15px!important}
+ .shop .product .pic{border-radius:16px 16px 12px 12px!important}
+ .shop .product .pmeta{min-height:82px!important;padding:11px 10px 10px!important}
+ .shop .product .pmeta .productName h3{font-size:12px!important}
+ .shop .product .pmeta .productBuyRow{height:30px!important;margin-top:5px!important}
+ .shop .product .pmeta .productBuyRow strong{font-size:13px!important;line-height:30px!important}
+ .shop .product .pmeta .productBuyRow .quickAdd{width:30px!important;height:30px!important;min-width:30px!important}
+ .shop .product .pmeta .productBuyRow .quickAdd .cartIcon svg{width:24px!important;height:24px!important}
+ .shop .product .pic .favorite{width:35px!important;height:35px!important;top:8px!important;right:8px!important}
+ .rtl .shop .product .pic .favorite{right:auto!important;left:8px!important}
+ .shop .product .pic .favorite svg{width:23px!important;height:23px!important}
+ .services{grid-template-columns:1fr 1fr!important}
+ .services>div{padding:22px 12px!important}
 }
