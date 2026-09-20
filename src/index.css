@@ -161,12 +161,9 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 .shop .product .pmeta {
   border-radius: 0 0 24px 24px;
 }
-.productImageSmooth {
-  animation: productPhotoFade .42s cubic-bezier(.22,.61,.36,1);
-}
+.productImageSmooth { animation: productPhotoFade .68s cubic-bezier(.16,1,.3,1); will-change: opacity, transform, filter; }
 @keyframes productPhotoFade {
-  from { opacity: .35; transform: scale(1.025); filter: grayscale(25%) blur(1px); }
-  to { opacity: 1; transform: scale(1); filter: grayscale(25%) blur(0); }
+  from { opacity: .08; transform: scale(1.035) translateX(10px); filter: grayscale(25%) blur(2px); } 55% { opacity: .72; transform: scale(1.012) translateX(2px); filter: grayscale(25%) blur(.5px); } to { opacity: 1; transform: scale(1) translateX(0); filter: grayscale(25%) blur(0); }
 }
 .productSwipe {
   touch-action: pan-y pinch-zoom;
