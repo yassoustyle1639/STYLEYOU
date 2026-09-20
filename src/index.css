@@ -1026,3 +1026,53 @@ header{z-index:50!important}
     gap:5px!important;
   }
 }
+
+
+/* FINAL SHOP TOOLS — filters, newest and view switch ALWAYS on ONE LINE */
+.shopViewTools{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:10px!important;
+  width:100%!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  white-space:nowrap!important;
+}
+.shopViewTools::-webkit-scrollbar{display:none!important}
+.shopViewTools .categoryPills{
+  flex:0 0 auto!important;
+  flex-wrap:nowrap!important;
+  overflow:visible!important;
+}
+.shopViewTools .sortBox{
+  flex:0 0 auto!important;
+}
+.shopViewTools .viewToggle{
+  flex:0 0 auto!important;
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+}
+@media(max-width:640px){
+  .shopViewTools{
+    width:100%!important;
+    justify-content:flex-start!important;
+    gap:7px!important;
+    padding-bottom:2px!important;
+  }
+  .shopViewTools .categoryPills{
+    flex:0 0 auto!important;
+    overflow:visible!important;
+    max-width:none!important;
+  }
+  .shopViewTools .categoryPills button{
+    flex:0 0 auto!important;
+  }
+  .shopViewTools .sortBox{
+    min-width:88px!important;
+  }
+}
