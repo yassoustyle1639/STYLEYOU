@@ -781,3 +781,52 @@ header{z-index:50!important}
 .shopHead .viewToggle button.active{color:#e8c978!important;background:rgba(210,173,98,.10)!important}
 .shopHead .viewToggle button svg{width:19px!important;height:19px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important}
 @media(max-width:640px){.shopHead .viewToggle button{width:34px!important;height:30px!important}.shopHead .viewToggle button svg{width:17px!important;height:17px!important}}
+
+
+/* FINAL HEART — larger clean gold outline, no shadow */
+.shop .product .pic .favorite{
+  width:46px!important;
+  height:46px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+  text-shadow:none!important;
+}
+.shop .product .pic .favorite svg{
+  width:36px!important;
+  height:36px!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+.shop .product .pic .favorite svg path{
+  fill:transparent!important;
+  stroke:#d8b45f!important;
+  stroke-width:1.9!important;
+  filter:none!important;
+}
+.shop .product .pic .favorite.active svg{
+  filter:none!important;
+}
+.shop .product .pic .favorite.active svg path{
+  fill:#ef2633!important;
+  stroke:#d8b45f!important;
+  stroke-width:1.6!important;
+  filter:none!important;
+}
+.shop .product .pic .favorite:hover svg{
+  transform:scale(1.06)!important;
+}
+@media(max-width:640px){
+  .shop .product .pic .favorite{
+    width:40px!important;
+    height:40px!important;
+    right:7px!important;
+    bottom:7px!important;
+  }
+  .shop .product .pic .favorite svg{
+    width:31px!important;
+    height:31px!important;
+  }
+}
