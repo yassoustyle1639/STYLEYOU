@@ -922,3 +922,107 @@ header{z-index:50!important}
     margin-bottom:16px!important;
   }
 }
+
+
+/* SHOP TOOLBAR — search alone, filters + sort beside view switch */
+.shopControls{
+  display:block!important;
+  margin-bottom:20px!important;
+  padding:10px!important;
+}
+.shopControls .searchBox{
+  width:100%!important;
+}
+.shopHead{
+  display:flex!important;
+  width:100%!important;
+  justify-content:flex-end!important;
+  align-items:center!important;
+  margin-bottom:22px!important;
+}
+.shopViewTools{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:10px!important;
+  width:auto!important;
+}
+.shopViewTools .categoryPills{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:4px!important;
+  overflow:visible!important;
+}
+.shopViewTools .categoryPills button{
+  flex:0 0 auto!important;
+}
+.shopViewTools .sortBox{
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:105px!important;
+  height:34px!important;
+  padding:0 10px!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:10px!important;
+}
+.shopViewTools .viewToggle{
+  flex:0 0 auto!important;
+}
+.rtl .shopHead{
+  justify-content:flex-start!important;
+}
+.rtl .shopViewTools{
+  justify-content:flex-start!important;
+}
+@media(max-width:900px){
+  .shopViewTools{
+    flex-wrap:wrap!important;
+    justify-content:flex-end!important;
+  }
+  .shopViewTools .categoryPills{
+    overflow:auto!important;
+    max-width:100%!important;
+  }
+  .shopViewTools .sortBox{
+    min-width:100px!important;
+  }
+}
+@media(max-width:640px){
+  .shopControls{
+    margin-bottom:16px!important;
+    padding:8px!important;
+  }
+  .shopHead{
+    margin-bottom:18px!important;
+  }
+  .shopViewTools{
+    width:100%!important;
+    justify-content:flex-start!important;
+    gap:7px!important;
+    overflow:hidden!important;
+  }
+  .shopViewTools .categoryPills{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    justify-content:flex-start!important;
+    overflow-x:auto!important;
+    scrollbar-width:none!important;
+  }
+  .shopViewTools .categoryPills::-webkit-scrollbar{
+    display:none!important;
+  }
+  .shopViewTools .categoryPills button{
+    height:32px!important;
+    padding:0 10px!important;
+  }
+  .shopViewTools .sortBox{
+    min-width:88px!important;
+    height:32px!important;
+    font-size:8px!important;
+  }
+  .shopViewTools .viewToggle{
+    gap:5px!important;
+  }
+}
