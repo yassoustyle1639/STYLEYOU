@@ -857,3 +857,12 @@ header{z-index:50!important}
   .shopHead .viewToggle{gap:5px!important}
   .shopHead .viewToggle button{width:34px!important;height:30px!important;border-radius:9px!important}
 }
+
+
+/* SHOP SEARCH — move the storefront controls higher after removing the section title */
+.shop{padding-top:28px!important}
+.shopControls{margin-top:0!important;margin-bottom:42px!important}
+@media(max-width:640px){
+  .shop{padding-top:18px!important}
+  .shopControls{margin-bottom:28px!important}
+}
