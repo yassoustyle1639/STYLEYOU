@@ -314,3 +314,20 @@ html[dir="rtl"] body{font-family:"Tajawal",Manrope,Arial,sans-serif}
 .shop .product .pmeta .quickAdd .cartIcon svg{width:30px!important;height:30px!important;stroke:#e2c27d!important;stroke-width:1.9!important;fill:none!important}
 .shop .product .pmeta .quickAdd .cartIcon svg path,.shop .product .pmeta .quickAdd .cartIcon svg circle{stroke:#e2c27d!important;fill:none!important;vector-effect:non-scaling-stroke!important}
 @media(max-width:640px){.shop .product .pmeta .quickAdd .cartIcon svg{width:27px!important;height:27px!important}}
+
+
+/* Product meta layout: name first line, price beside cart */
+.shop .product .pmeta{position:relative!important;display:block!important;min-height:92px!important;padding:15px 58px 14px 18px!important}
+.shop .product .pmeta .productName{width:100%!important;min-width:0!important}
+.shop .product .pmeta .productName h3{margin:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.shop .product .pmeta .productBuyRow{display:flex!important;align-items:center!important;gap:12px!important;margin-top:10px!important}
+.shop .product .pmeta .productBuyRow strong{margin:0!important;align-self:center!important;font-size:15px!important;white-space:nowrap!important}
+.shop .product .pmeta .quickAdd{position:static!important;width:30px!important;height:30px!important;min-width:30px!important;flex:0 0 30px!important;margin:0!important;padding:0!important}
+.rtl .shop .product .pmeta{padding:15px 18px 14px 58px!important}
+@media(max-width:640px){
+ .shop .product .pmeta{min-height:92px!important;padding:13px 45px 13px 10px!important}
+ .rtl .shop .product .pmeta{padding:13px 10px 13px 45px!important}
+ .shop .product .pmeta .productBuyRow{margin-top:8px!important;gap:9px!important}
+ .shop .product .pmeta .productBuyRow strong{font-size:14px!important}
+ .shop .product .pmeta .quickAdd{width:27px!important;height:27px!important;min-width:27px!important;flex-basis:27px!important}
+}
