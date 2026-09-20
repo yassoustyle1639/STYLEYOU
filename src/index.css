@@ -866,3 +866,59 @@ header{z-index:50!important}
   .shop{padding-top:18px!important}
   .shopControls{margin-bottom:28px!important}
 }
+
+
+/* FINAL VIEW SWITCH POSITION — horizontal, edge aligned, never stacked */
+.shopHead{
+  display:flex!important;
+  width:100%!important;
+  justify-content:flex-end!important;
+  align-items:center!important;
+  margin-bottom:22px!important;
+}
+.shopHead>div:last-child{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  width:auto!important;
+  margin:0!important;
+}
+.shopHead .viewToggle{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  margin:0!important;
+}
+.shopHead .viewToggle button{
+  flex:0 0 auto!important;
+}
+.rtl .shopHead{
+  justify-content:flex-start!important;
+}
+.rtl .shopHead>div:last-child{
+  justify-content:flex-start!important;
+}
+@media(max-width:800px){
+  .shopHead{
+    display:flex!important;
+    justify-content:flex-end!important;
+    align-items:center!important;
+    margin-bottom:18px!important;
+  }
+  .shopHead>div:last-child{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+  }
+  .rtl .shopHead{
+    justify-content:flex-start!important;
+  }
+}
+@media(max-width:640px){
+  .shopHead{
+    margin-bottom:16px!important;
+  }
+}
