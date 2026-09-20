@@ -772,3 +772,12 @@ header{z-index:50!important}
  .services{grid-template-columns:1fr 1fr!important}
  .services>div{padding:22px 12px!important}
 }
+
+
+/* FINAL ICON CLEANUP */
+.shop .product .pic .favorite{border:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.shopHead .viewToggle{display:flex!important;align-items:center!important;gap:2px!important;padding:3px!important;border:1px solid rgba(255,255,255,.10)!important;background:rgba(255,255,255,.025)!important;border-radius:999px!important}
+.shopHead .viewToggle button{display:flex!important;align-items:center!important;justify-content:center!important;width:38px!important;height:34px!important;padding:0!important;background:transparent!important;border:0!important;color:#9d9d9d!important;border-radius:999px!important}
+.shopHead .viewToggle button.active{color:#e8c978!important;background:rgba(210,173,98,.10)!important}
+.shopHead .viewToggle button svg{width:19px!important;height:19px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+@media(max-width:640px){.shopHead .viewToggle button{width:34px!important;height:30px!important}.shopHead .viewToggle button svg{width:17px!important;height:17px!important}}
